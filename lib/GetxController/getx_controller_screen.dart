@@ -13,18 +13,15 @@ class GetxControllerScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 24.0),
-            Text(
-              'Individual variables observable',
-              style: TextStyle(fontSize: 20.0, color: Colors.black),
-            ),
             SizedBox(height: 12.0),
             Text(
               'Entire Class observable',
               style: TextStyle(fontSize: 20.0, color: Colors.black),
             ),
-            SizedBox(height: 12.0),
+            SizedBox(height: 30.0),
             Obx(
               () => Text(
                 'Name is ${myController!.student.value.name}',
@@ -33,8 +30,14 @@ class GetxControllerScreen extends StatelessWidget {
             ),
             SizedBox(height: 12.0),
             ElevatedButton(
-              onPressed: () => myController!.convertToUpperCaseForEntireClass(),
+              onPressed: () => myController!.convertToUpperCase(),
               child: Text('Upper'),
+            ),
+            SizedBox(height: 30.0),
+            SizedBox(height: 12.0),
+            ElevatedButton(
+              onPressed: () => myController!.convertToLowerCase(),
+              child: Text('Lower'),
             ),
           ],
         ),
