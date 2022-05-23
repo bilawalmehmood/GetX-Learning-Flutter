@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:getxlearning/GetxController/Controllers/my_controller.dart';
 
 class GetxControllerScreen extends StatelessWidget {
-  final MyController? myController = Get.put(MyController());
+  final MyController myController = Get.put(MyController());
 
   @override
   Widget build(BuildContext context) {
@@ -24,19 +24,18 @@ class GetxControllerScreen extends StatelessWidget {
             SizedBox(height: 30.0),
             Obx(
               () => Text(
-                'Name is ${myController!.student.value.name}',
+                'Name is ${myController.student2.value.name}',
                 style: TextStyle(color: Colors.black, fontSize: 18.0),
               ),
             ),
             SizedBox(height: 12.0),
             ElevatedButton(
-              onPressed: () => myController!.convertToUpperCase(),
+              onPressed: () => myController.convertToUpperCase(),
               child: Text('Upper'),
             ),
             SizedBox(height: 30.0),
-            SizedBox(height: 12.0),
             ElevatedButton(
-              onPressed: () => myController!.convertToLowerCase(),
+              onPressed: () => myController.convertToLowerCase(),
               child: Text('Lower'),
             ),
           ],

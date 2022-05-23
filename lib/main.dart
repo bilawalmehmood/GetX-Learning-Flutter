@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxlearning/BottomSheet/bottom_sheet.dart';
 import 'package:getxlearning/DialogBox/dialogbox_screen.dart';
+import 'package:getxlearning/GetxController/getx_controller_screen.dart';
+import 'package:getxlearning/GetxControllerLifeCycle/getx_controller_life_cycle.dart';
+import 'package:getxlearning/Navigation/navigation_main_screen.dart';
+
+import 'package:getxlearning/ReactStateManager/react_state_manager_screen.dart';
 
 import 'package:getxlearning/SnackBar/snackbar_screen.dart';
 import 'package:getxlearning/widgets/home_button.dart';
@@ -85,6 +91,31 @@ class HomeScreen extends StatelessWidget {
             HomeButton(
               buttonText: 'Dialog Box',
               onPressed: () => Get.to(() => DialogBoxScreen()),
+            ),
+            SizedBox(height: 8.0),
+            HomeButton(
+              buttonText: 'React State Management ',
+              onPressed: () => Get.to(() => ReactiveStateManagerScreen()),
+            ),
+            SizedBox(height: 8.0),
+            HomeButton(
+              buttonText: 'Navigation Screen',
+              onPressed: () => Get.to(() => NavigationMainScreen()),
+            ),
+            SizedBox(height: 8.0),
+            HomeButton(
+              buttonText: 'My Controller',
+              onPressed: () => Get.to(() => GetxControllerScreen()),
+            ),
+            SizedBox(height: 8.0),
+            HomeButton(
+              buttonText: 'Bottom Sheet',
+              onPressed: () => Get.to(() => BottomSheetScreen()),
+            ),
+            SizedBox(height: 8.0),
+            HomeButton(
+              buttonText: 'Getx LifeCycle Controller',
+              onPressed: () => Get.to(() => GetxControllerLifecycleScreen()),
             ),
             SizedBox(height: 8.0),
           ],
