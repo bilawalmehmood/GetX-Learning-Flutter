@@ -6,8 +6,8 @@ class HomeButton extends StatelessWidget {
 
   const HomeButton({
     Key? key,
-    this.buttonText = '',
-    this.onPressed,
+    required this.buttonText,
+    required this.onPressed,
   }) : super(key: key);
 
   @override

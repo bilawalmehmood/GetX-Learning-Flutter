@@ -4,6 +4,8 @@ import 'package:getxlearning/BottomSheet/bottom_sheet.dart';
 import 'package:getxlearning/DialogBox/dialogbox_screen.dart';
 import 'package:getxlearning/GetxController/getx_controller_screen.dart';
 import 'package:getxlearning/GetxControllerLifeCycle/getx_controller_life_cycle.dart';
+import 'package:getxlearning/GetxIdUnique/getx_unique_id_screen.dart';
+import 'package:getxlearning/GetxWorker/getx_worker_screen.dart';
 import 'package:getxlearning/Navigation/navigation_main_screen.dart';
 
 import 'package:getxlearning/ReactStateManager/react_state_manager_screen.dart';
@@ -116,6 +118,16 @@ class HomeScreen extends StatelessWidget {
             HomeButton(
               buttonText: 'Getx LifeCycle Controller',
               onPressed: () => Get.to(() => GetxControllerLifecycleScreen()),
+            ),
+            SizedBox(height: 8.0),
+            HomeButton(
+              buttonText: 'Getx Unique Id',
+              onPressed: () => Get.to(() => UniqueIdScreen()),
+            ),
+            SizedBox(height: 8.0),
+            HomeButton(
+              buttonText: 'Getx Worker',
+              onPressed: () => Get.to(() => WorkerScreen()),
             ),
             SizedBox(height: 8.0),
           ],
