@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxlearning/BottomSheet/bottom_sheet.dart';
 import 'package:getxlearning/DialogBox/dialogbox_screen.dart';
+import 'package:getxlearning/GetxApiData/screens/fetch_data_api_screen.dart';
+import 'package:getxlearning/GetxApiData/screens/product_list_screen.dart';
 import 'package:getxlearning/GetxController/getx_controller_screen.dart';
 import 'package:getxlearning/GetxControllerLifeCycle/getx_controller_life_cycle.dart';
 import 'package:getxlearning/GetxIdUnique/getx_unique_id_screen.dart';
@@ -128,6 +130,11 @@ class HomeScreen extends StatelessWidget {
             HomeButton(
               buttonText: 'Getx Worker',
               onPressed: () => Get.to(() => WorkerScreen()),
+            ),
+            SizedBox(height: 8.0),
+            HomeButton(
+              buttonText: 'Getx Api Data Fetch',
+              onPressed: () => Get.to(() => FetchApiDataScreen()),
             ),
             SizedBox(height: 8.0),
           ],
